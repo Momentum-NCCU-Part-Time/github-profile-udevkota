@@ -1,7 +1,7 @@
 let entryPoint = document.querySelector('main')
-let sumbitBtn = document.querySelector('button')
+let sumbit = document.querySelector('#usernameForm')
 
-sumbitBtn.addEventListener('click', (event) => {
+sumbit.addEventListener('submit', (event) => {
   event.preventDefault()
   let usernameInputVal = document.querySelector('input').value
 
@@ -20,25 +20,21 @@ sumbitBtn.addEventListener('click', (event) => {
                       <div class="repos">
                         <h3 class="reposTitle">GitHub Repos</h3>
                         <ul class="reposList">
-                        </ul class="listOfRepos">
-                      </div>`
-
+                        </ul>
+                      <div class="repos">`
 
       fetch(`https://api.github.com/users/${usernameInputVal}/repos`)
         .then(res => res.json())
         .then(data => {
-          console.log(data)
-
+          // console.log(data)
           function customerToHTML(repoData) {
             return `<li><a href="${repoData['html_url']}">${repoData['name']}</a></li>`
-                    
           }
 
           let allRepos = data.map((repoElement) => customerToHTML(repoElement)).join('\n');
 
           entryPoint.innerHTML = userInfo + allRepos
         })
-      
     })
     .catch( err => {
       console.log(err)
@@ -47,6 +43,6 @@ sumbitBtn.addEventListener('click', (event) => {
 
 
 //Need to do 
-// fix submit button to input 
+//append li(s) since need to attach within ul (template literal would not be a good choice here unless you append)
 // css
-// add icons
+  // add icons

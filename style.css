@@ -1,3 +1,38 @@
-h1{
+*{
+  box-sizing: border-box;
+  font-family: 'Manrope', serif;
+  margin: 0;
+  padding: 0;
+}
+
+section{
+  padding: 5%;
+  text-align: center;
+}
+
+span{
   color: red;
+}
+
+.userImageAndName{
+  /* display: flex; */
+  margin: 5%;
+  text-align: center;
+}
+
+img{
+  width: 40vw;
+  border-radius: 50%;
+}
+
+.addresses, .repos, .reposTitle{
+  padding: 0 10% 2% 10%;
+}
+
+li{
+  list-style: none;
+}
+
+.repos{
+  padding: 0 5%;
 }

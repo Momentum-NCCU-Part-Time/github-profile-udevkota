@@ -4,21 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Github Checker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope&family=Raleway&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <script src="main.js" defer></script>
 </head>
 <body>
   <section>
     <h1>Github User Directory</h1>
-    <span>Find the user and their repos!</span>
-    <form id="username">
+    <span>Find user info and repos!</span>
+    <form id="usernameForm">
+      <label for="usernameText">Enter GitHub Username: </label>
       <input id="usernameText" type="text" placeholder="udevkota">
-      <button type="button">Submit</button>
+      <input type="submit" value="Submit" />
     </form>
   </section>
-
   <main>
-  </main>
-  
+  </main>  
 </body>
 </html>
